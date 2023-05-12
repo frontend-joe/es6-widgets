@@ -1,0 +1,140 @@
+body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background: #f5f8fa;
+  color: #181c32;
+  font-family: "Euclid Circular A", "Poppins";
+}
+
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+h4 {
+  color: #a1a5b7;
+  font-size: 12px;
+}
+
+table {
+  width: 100%;
+}
+
+table tr td {
+  padding: 10px 0;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  background: #ffffff;
+  width: 400px;
+}
+
+.card header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.card header button {
+  background: transparent;
+  border: 0;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+}
+
+.stars {
+  display: flex;
+  gap: 3px;
+}
+
+.stars img {
+  width: 16px;
+  height: 16px;
+}
+
+.social {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+}
+
+.buttons {
+  display: flex;
+}
+
+.buttons button {
+  display: grid;
+  place-items: center;
+  padding: 14px;
+  border-radius: 6px;
+  color: #a1a5b7;
+}
+
+.buttons button.active {
+  background: #ecf5fd;
+  color: #009ef7;
+}
+
+.tables {
+  position: relative;
+  height: 196px;
+}
+
+table {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: auto;
+  animation: table-out 0.2s both;
+}
+
+table tr td:nth-child(2) {
+  width: 140px;
+}
+
+table tr td:last-child {
+  text-align: right;
+}
+
+@keyframes table-in {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes table-out {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+table.active {
+  animation: table-in 0.2s 0.2s both;
+}
